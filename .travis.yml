@@ -1,0 +1,8 @@
+language: clojure
+deploy:
+  provider: heroku
+  api_key:
+    secure: QTSe4KWGlSX95AqJHO0qAtf1hS+fwKUhVR9i7GHZrqFFCye/Hm3JRso7ELO3t3lRrHYx3oyGElXLIrKOvxmaj0A8zZK0LPgQ/EHH3e+GcN84kuqJiYCAYqGqKJiecJKA7mB8nDO3J1/3amLBHBrq6TJZtjW+cgUZ6XQlk+O4lzU=
+  app: subtitle-party
+  on:
+    repo: boondaburrah/subtitleparty
