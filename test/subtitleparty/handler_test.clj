@@ -7,7 +7,7 @@
   (testing "main route"
     (let [response (app (mock/request :get "/"))]
       (is (= (:status response) 200))
-      (is (= (:body response) "Hello World"))))
+      (is (= (:body response) "<body><form action=\"http://localhost:3000/upload\" method=\"post\" enctype=\"multipart/form-data\"><input type=\"file\" name=\"file\"></input><input type=\"submit\"></input></form></body>"))))
 
   (testing "not-found route"
     (let [response (app (mock/request :get "/invalid"))]

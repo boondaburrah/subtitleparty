@@ -7,8 +7,7 @@
 
 (defroutes app-routes
   (GET "/" [] "<body><form action=\"http://localhost:3000/upload\" method=\"post\" enctype=\"multipart/form-data\"><input type=\"file\" name=\"file\"></input><input type=\"submit\"></input></form></body>")
-  (POST "/upload" {{{tempfile :tempfile filename :filename} :file} :params :as params}
-    (hu/escape-html (slurp tempfile)))
+; (POST "/upload" {{{tempfile :tempfile filename :filename} :file} :params :as params} (hu/escape-html (slurp tempfile)))
   (route/not-found "Not Found"))
 
 (def app
